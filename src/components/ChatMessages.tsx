@@ -1,6 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useChatStore } from "../store/chatStore";
 import { supabase } from "../supabaseClient";
+import { useEffect } from "react";
 
 interface Message {
   id: number;
@@ -23,6 +24,7 @@ async function fetchMessages(roomId: number): Promise<Message[]> {
 
 function ChatMessages() {
   const { currentRoom, user } = useChatStore();
+  const queryClient = useQueryClient();
 
   const {
     data: messages,
@@ -36,6 +38,25 @@ function ChatMessages() {
         : fetchMessages(currentRoom!.id),
     enabled: currentRoom?.id !== null,
   });
+
+  useEffect(() => {
+    if (!currentRoom?.id)return
+
+    const channel = supabase.channel("message-channel")
+
+    channel.on("postgres_changes", {event: "INSERT", schema: "public", table: "messages"}, (payload) => {
+     const newMessage = payload.new as Message;
+     if (newMessage.room_id === currentRoom.id) {
+        queryClient.setQueryData<Message[]>(["messages", currentRoom?.id], (oldMessages) => oldMessages ?  [...oldMessages, newMessage] : [newMessage] );
+     }
+    }).subscribe((status) => {
+        console.log("Sub status:", status);
+    });
+
+    return () => {
+        supabase.removeChannel(channel);
+    };
+  }, [currentRoom?.id])
 
   if (isLoading) return <p className="loader-text">Loading messages...</p>;
   if (error)
