@@ -36,17 +36,16 @@ Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 ## 🖼️ Screenshots
 
 ### Login / Sign Up Page
-![Login Page](src/phots/login.png)
+![Login Page](images/login.png)
 
 ### Available Rooms Page
-![Available Rooms](src/phots/availablerooms.png)
+![Available Rooms](images/availablerooms.png)
 
 ### Create Room Page
-![Create Room](src/phots/createroom.png)
+![Create Room](images/createroom.png)
 
 ### Chat Room Page
-![Chat Room](src/phots/chatroom.png)
-
+![Chat Room](images/chatroom.png)
 
 ## 🚀 Live Demo
 
