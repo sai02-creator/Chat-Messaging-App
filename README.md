@@ -41,8 +41,6 @@ Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 ![Supabase](https://img.shields.io/badge/Supabase-1.0-green?logo=supabase)
 ![Zustand](https://img.shields.io/badge/Zustand-state-yellow)
 
-A **real-time chat messaging application** built with **React**, **TypeScript**, **Zustand**, and **Supabase**.  
-Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 
 ---
 
@@ -101,12 +99,11 @@ Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 - **Data Fetching:** React Query  
 - **Styling:** CSS  
 
-
+---
 
 ## 🚀 Live Demo
 
-[View Live Chat App on Vercel](https://your-vercel-deployed-url.vercel.app)
-
+[View Live Chat App on Vercel](https://chat-messaging-otvvtctyn-sai-chaitanya-gaddams-projects.vercel.app)
 
 
 
