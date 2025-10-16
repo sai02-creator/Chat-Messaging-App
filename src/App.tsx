@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Auth from './components/Auth'
+import Dashboard from './components/Dashboard';
 import { useChatStore } from './store/chatStore'
 import { supabase } from './supabaseClient';
 function App() {
@@ -25,13 +26,12 @@ function App() {
     return () => subscription.unsubscribe();
   
 
-  });
-  if(!user) {
-  return 
-    <Auth />
+  }, []);
+  if (!user) {
+  return <Auth />
   }
   
-  return <div> Chat App</div>
+  return <Dashboard />
 
 }
 
