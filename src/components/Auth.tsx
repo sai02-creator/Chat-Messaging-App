@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useForm } from 'react-hook-form'
 import { supabase } from '../supabaseClient'
-import { AuthError } from "@supabase/supabase-js";
+//import { AuthError } from "@supabase/supabase-js";
 
 enum AuthType {
     Login = "login",
     SignUp = "signup",
 }
+
 
 interface AuthFormData {
   email: string;
