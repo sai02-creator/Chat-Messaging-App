@@ -66,13 +66,6 @@ Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 
 ---
 
-# Chat Messaging App
-
-![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-4.0-purple?logo=vite)
-![Supabase](https://img.shields.io/badge/Supabase-1.0-green?logo=supabase)
-![Zustand](https://img.shields.io/badge/Zustand-state-yellow)
 
 A **real-time chat messaging application** built with **React**, **TypeScript**, **Zustand**, and **Supabase**.  
 Users can sign up, log in, join chat rooms, and exchange messages in real-time.
