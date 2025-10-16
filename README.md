@@ -33,6 +33,21 @@ Users can sign up, log in, join chat rooms, and exchange messages in real-time.
 
 ---
 
+## 🖼️ Screenshots
+
+### Login / Sign Up Page
+![Login Page](src/phots/login.png)
+
+### Available Rooms Page
+![Available Rooms](src/phots/availablerooms.png)
+
+### Create Room Page
+![Create Room](src/phots/createroom.png)
+
+### Chat Room Page
+![Chat Room](src/phots/chatroom.png)
+
+
 ## 🚀 Live Demo
 
 [![View Live Chat App](https://img.shields.io/badge/Live%20Demo-Chat%20App-blue?logo=vercel&logoColor=white)](https://chat-messaging-otvvtctyn-sai-chaitanya-gaddams-projects.vercel.app)
